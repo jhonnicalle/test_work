@@ -1,0 +1,81 @@
+.section-card
+  display: flex
+  align-items: center
+  justify-content: center
+  
+.section-options
+  padding: 20px 0
+  text-align: center
+
+  .content-section-options
+    margin: 0 auto
+    width: 500px
+    @media all and ( max-width: 640px )
+      width: 100%
+      
+    
+    .title
+      font-size: 28px
+    .paragraph
+      // font-weight: 300
+      line-height: 1.5
+      margin: 0 20px
+    
+    
+
+  .options
+    display: flex
+    flex-direction: row
+    margin: 20px 30px
+    @media all and ( max-width: 640px )
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      margin: 20px 5px
+
+    .paper
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      width: 33.33%
+      margin: 0 10px
+      padding: 15px
+      cursor: pointer
+      user-select: none
+      // -webkit-box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.4);
+      // -moz-box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.4);
+      // box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.1);  
+      &-up
+        -webkit-box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.1)
+        -moz-box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.1)
+        box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.1)
+        // -webkit-box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.4);
+        // -moz-box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.4);
+        // box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.4);  
+      @media all and ( max-width: 640px )
+        margin: 20px 0px
+        width: 80%
+      
+      .image
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100px
+        width: 100px
+        border-radius: 50px 
+        margin: 20px
+        background: linear-gradient(210deg, #ceaff7 17%, #8389aa 100%);
+
+        -webkit-box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 17px 30px -7px rgba(0,0,0,0.4);
+        box-shadow: 0px 8px 30px -7px rgba(0,0,0,0.4);  
+        img
+          width: 50px
+      .title
+        font-size: 18px
+        font-weight: 600
+      .info
+        font-size: 12px
+        font-weight: 300
+    
