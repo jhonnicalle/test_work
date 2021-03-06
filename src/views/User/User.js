@@ -11,8 +11,6 @@ import { Link } from "react-router-dom";
 
 const User = (props) => {
 
-  const [data, setData] = useState([])
-
   const columns = useMemo(() => [
     {
       name: 'Name',
@@ -31,23 +29,15 @@ const User = (props) => {
       sortable: true,
     },
     {
-      // name: 'Op',
-      // selector: 'email',
-      // sortable: true,
-      cell: row => <Link to={`users/${row.id}`}><botton>Check</botton></Link>
+      cell: row => <Link to={`users/${row.id}`}><button className='button'>Check</button></Link>
     },
 
   ]);
 
-  const getData = async() => {
+  const getData = async () => {
     await props.dispatch(
       getListUsers()
     )
-    // setData(() => )
-    // API.get('users/')
-    // .then(res => {
-    //   setData(res.data)
-    // })
   }
 
   useEffect(() => {
@@ -67,7 +57,7 @@ const User = (props) => {
           // style={{padding: '10px'}}
           noHeader
           columns={columns}
-          data={props.users.users.data} 
+          data={props.users.users} 
           pagination
         />
       </div>

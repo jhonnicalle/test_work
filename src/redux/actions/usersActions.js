@@ -11,16 +11,16 @@ export const getListUsers = () => async dispatch => {
   
   dispatch({
     type: GET_LIST_USERS_REQUEST,
-    payload: respuesta
+    payload: respuesta.data
   })
 }
 
 export const getUser = (id) => async dispatch => {
-  const respuesta = await getUserByID();
+  const respuesta = await getUserByID(id);
   
   dispatch({
     type: GET_USER_REQUEST,
-    payload: respuesta
+    payload: respuesta.data
   })
 }
 
@@ -28,7 +28,7 @@ export const editUserByID = (id, data) => async dispatch => {
   const respuesta = await editUser(id, data);
   
   dispatch({
-    type: GET_USER_REQUEST,
+    type: EDIT_USER_REQUEST,
     payload: respuesta
   })
 }
@@ -36,15 +36,15 @@ export const editUserByID = (id, data) => async dispatch => {
 export const createUser = (data) => async dispatch => {
   const respuesta = await addUser(data);
   dispatch({
-    type: GET_USER_REQUEST,
+    type: CREATE_USER_REQUEST,
     payload: respuesta
   })
 }
 
 export const deleteUser = (id) => async dispatch => {
-  const respuesta = await eraseUser(id);
+  await eraseUser(id);
   dispatch({
-    type: GET_USER_REQUEST,
-    payload: respuesta
+    type: DELETE_USER_REQUEST,
+    payload: id
   })
 }
