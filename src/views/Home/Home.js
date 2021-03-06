@@ -10,9 +10,6 @@ import Footer from '../../components/Footer/Footer'
 const Home = () => {
   return (
     <div>
-      
-       
-      {/* </div> */}
       <Navbar />
       <Header />
       <div className='section-card'>
@@ -49,7 +46,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className='section-slider'>
+        <div className='content-section-slider'>
+          <h2 className='title'>Chose Your Card</h2>
+          <p className='paragraph'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim elit vel erat laoreet egestas id gravida felis.</p>
+        </div>
         <Roller />
       </div>
 
