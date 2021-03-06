@@ -1,17 +1,43 @@
 import API from "./API"
 
-const endpoints = {
-  users: {
-    get_users: 'users/'
-  }
-}
-
-export const getUsers = async () => {
-  await API.get(endpoints.users.get_users)
-  .then(res => { alert(res)})
+const getUsers =  () => {
+  return  API.get(`users/`)
+  .then(res => res)
   .catch (error => {
-    return error
+    throw error
   })
 }
 
-// export {getUsers}
+const getUserByID = (id) => {
+  return  API.get(`users/${id}`)
+  .then(res => res)
+  .catch (error => {
+    throw error
+  })
+}
+
+const editUser =  (id, data) => {
+  return  API.put(`users/${id}`, data)
+  .then(res => res)
+  .catch (error => {
+    throw error
+  })
+}
+
+const eraseUser =  (id) => {
+  return  API.delete(`users/${id}`)
+  .then(res => res)
+  .catch (error => {
+    throw error
+  })
+}
+
+const addUser =  (data) => {
+  return  API.post(`users/`, data)
+  .then(res => res)
+  .catch (error => {
+    throw error
+  })
+}
+
+export {getUsers, getUserByID, editUser, eraseUser, addUser}

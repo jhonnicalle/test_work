@@ -5,6 +5,7 @@ import API from './utils/API';
 import { Route, Switch } from 'react-router';
 import Home from './views/Home';
 import User from './views/User/User';
+import InfoUser from './views/User/InfoUser';
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
   return (
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route path='/users' component={User} />
+      <Route exact path='/users' component={User} />
+      <Route exact path='/users/:id' component={InfoUser} />
     </Switch>
   );
 }
